@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+@plugin "tailwindcss-animate";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Homemade+Apple&family=Imperial+Script&family=Kapakana:wght@300..400&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+.kapakana-one {
+  font-size:25rch;
+  font-family: "Kapakana", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+
+}
+.kapakana-two {
+  font-size:15rch;
+  font-family: "Kapakana", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+
+}
+.kapakana-two {
+  font-size:10rch;
+  font-family: "Kapakana", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+
+}
+/* Add this to your main CSS file */
+.highlight-text {
+  background-image: linear-gradient(to right, rgb(232, 177, 95) 0%, rgb(228, 170, 78) 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%; /* Start with no highlight */
+  transition: background-size 1s ease-in-out; /* Smooth transition over 1 second */
+}
+
+.highlight-text.active {
+  background-size: 100% 100%; /* Expand to full highlight */
+}
+.kapakana-three {
+  font-size:10rch;
+  font-family: "Kapakana", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
+
+}
+.imperial-script-regular {
+  font-size:8rem;
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.imperial-script-mini {
+  font-size:5rem;
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 400px) { /* Corresponds to Tailwind's md breakpoint */
+    .kapakana-one {
+        font-size: 5rem;
+    }
+    .imperial-script-regular {
+        font-size: 6rem;
+    }
+    .imperial-script-mini{
+      font-size: 3rem;
+    }
+}
+
+@media (min-width: 1024px) { /* Corresponds to Tailwind's lg breakpoint */
+    .kapakana-one{
+        font-size: 10rem;
+    }
+    /* .imperial-script-regular {
+        font-size: 8rem;
+    } */
+}
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); /* Green color with some transparency */
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); /* Glow out and become transparent */
+    }
+}
+/* src/index.css */
+/* Add this at the end of your file */
+
+.note-card {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+/* Pushpin Effect */
+.note-card[data-pin-type="pin"]::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23ef4444"><path d="M16 8V4c0-2.209-1.791-4-4-4S8 1.791 8 4v4c-1.332 0-2.664 1.332-4 2.664-1.332 1.332-1.332 2.664-1.332 4s0 2.664 1.332 4c1.332 1.332 2.664 1.332 4 1.332 1.336 0 2.664-1.332 4-1.332 1.336 0 2.664 1.332 4 1.332 1.336 0 2.664-1.332 4-1.332C22.668 18.664 22.668 17.332 24 16c1.332-1.332 1.332-2.664 1.332-4s0-2.664-1.332-4z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Sticker Effect */
+.note-card[data-pin-type="sticker"]::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 12px;
+    background-color: #fca5a5;
+    border-radius: 9999px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+.caret-text {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #1f2937;
+    line-height: 0.5;
+    transform: translateY(100%); /* Position below the line */
+}
+.caret-text-one {
+    font-family: 'Homemade Apple',cursive;
+    font-size: 1rem; /* Adjust size as needed */
+    color: #1f2937;
+    line-height: 0.5;
+    transform: translateY(100%); /* Position below the line */
+}
+.aspiring-text {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 2rem; /* Adjust size as needed */
+    color: #1f2937;
+    white-space: nowrap;
+}
+/* Hover effect to make elements slide up and appear */
+.inline-block:hover .caret-animation {
+    transform: translateY(-100%);
+}
+
+.inline-block:hover .aspiring-text {
+    transform: translateY(-100%);
+    opacity: 1;
+}
+
+@keyframes drawLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 1.5rem; /* The final width of the line */
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@theme inline {
+  --radius-sm:calc(var(--radius) - 4px);
+  --radius-md:calc(var(--radius) - 2px);
+  --radius-lg:var(--radius);
+  --radius-xl:calc(var(--radius) + 4px);
+  --color-background:var(--background);
+  --color-foreground:var(--foreground);
+  --color-card:var(--card);
+  --color-card-foreground:var(--card-foreground);
+  --color-popover:var(--popover);
+  --color-popover-foreground:var(--popover-foreground);
+  --color-primary:var(--primary);
+  --color-primary-foreground:var(--primary-foreground);
+  --color-secondary:var(--secondary);
+  --color-secondary-foreground:var(--secondary-foreground);
+  --color-muted:var(--muted);
+  --color-muted-foreground:var(--muted-foreground);
+  --color-accent:var(--accent);
+  --color-accent-foreground:var(--accent-foreground);
+  --color-destructive:var(--destructive);
+  --color-border:var(--border);
+  --color-input:var(--input);
+  --color-ring:var(--ring);
+  --color-chart-1:var(--chart-1);
+  --color-chart-2:var(--chart-2);
+  --color-chart-3:var(--chart-3);
+  --color-chart-4:var(--chart-4);
+  --color-chart-5:var(--chart-5);
+  --color-sidebar:var(--sidebar);
+  --color-sidebar-foreground:var(--sidebar-foreground);
+  --color-sidebar-primary:var(--sidebar-primary);
+  --color-sidebar-primary-foreground:var(--sidebar-primary-foreground);
+  --color-sidebar-accent:var(--sidebar-accent);
+  --color-sidebar-accent-foreground:var(--sidebar-accent-foreground);
+  --color-sidebar-border:var(--sidebar-border);
+  --color-sidebar-ring:var(--sidebar-ring);
+
+}
+
+:root {
+  --radius:0.625rem;
+  --background:oklch(1 0 0);
+  --foreground:oklch(0.145 0 0);
+  --card:oklch(1 0 0);
+  --card-foreground:oklch(0.145 0 0);
+  --popover:oklch(1 0 0);
+  --popover-foreground:oklch(0.145 0 0);
+  --primary:oklch(0.205 0 0);
+  --primary-foreground:oklch(0.985 0 0);
+  --secondary:oklch(0.97 0 0);
+  --secondary-foreground:oklch(0.205 0 0);
+  --muted:oklch(0.97 0 0);
+  --muted-foreground:oklch(0.556 0 0);
+  --accent:oklch(0.97 0 0);
+  --accent-foreground:oklch(0.205 0 0);
+  --destructive:oklch(0.577 0.245 27.325);
+  --border:oklch(0.922 0 0);
+  --input:oklch(0.922 0 0);
+  --ring:oklch(0.708 0 0);
+  --chart-1:oklch(0.646 0.222 41.116);
+  --chart-2:oklch(0.6 0.118 184.704);
+  --chart-3:oklch(0.398 0.07 227.392);
+  --chart-4:oklch(0.828 0.189 84.429);
+  --chart-5:oklch(0.769 0.188 70.08);
+  --sidebar:oklch(0.985 0 0);
+  --sidebar-foreground:oklch(0.145 0 0);
+  --sidebar-primary:oklch(0.205 0 0);
+  --sidebar-primary-foreground:oklch(0.985 0 0);
+  --sidebar-accent:oklch(0.97 0 0);
+  --sidebar-accent-foreground:oklch(0.205 0 0);
+  --sidebar-border:oklch(0.922 0 0);
+  --sidebar-ring:oklch(0.708 0 0);
+
+}
+
+.dark {
+  --background:oklch(0.145 0 0);
+  --foreground:oklch(0.985 0 0);
+  --card:oklch(0.205 0 0);
+  --card-foreground:oklch(0.985 0 0);
+  --popover:oklch(0.205 0 0);
+  --popover-foreground:oklch(0.985 0 0);
+  --primary:oklch(0.922 0 0);
+  --primary-foreground:oklch(0.205 0 0);
+  --secondary:oklch(0.269 0 0);
+  --secondary-foreground:oklch(0.985 0 0);
+  --muted:oklch(0.269 0 0);
+  --muted-foreground:oklch(0.708 0 0);
+  --accent:oklch(0.269 0 0);
+  --accent-foreground:oklch(0.985 0 0);
+  --destructive:oklch(0.704 0.191 22.216);
+  --border:oklch(1 0 0 / 10%);
+  --input:oklch(1 0 0 / 15%);
+  --ring:oklch(0.556 0 0);
+  --chart-1:oklch(0.488 0.243 264.376);
+  --chart-2:oklch(0.696 0.17 162.48);
+  --chart-3:oklch(0.769 0.188 70.08);
+  --chart-4:oklch(0.627 0.265 303.9);
+  --chart-5:oklch(0.645 0.246 16.439);
+  --sidebar:oklch(0.205 0 0);
+  --sidebar-foreground:oklch(0.985 0 0);
+  --sidebar-primary:oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground:oklch(0.985 0 0);
+  --sidebar-accent:oklch(0.269 0 0);
+  --sidebar-accent-foreground:oklch(0.985 0 0);
+  --sidebar-border:oklch(1 0 0 / 10%);
+  --sidebar-ring:oklch(0.556 0 0);
+
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+
+  }
+  body {
+    @apply bg-background text-foreground;
+
+  }
+
+}

@@ -4,7 +4,7 @@ const Hero = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="flex flex-col items-center justify-center p-8 text-center min-h-[calc(100vh-6rem)] bg-white">
+        <div id="home" className="flex flex-col items-center justify-center p-8 text-center min-h-[calc(100vh-6rem)] bg-white">
             <h2 className="text-xl font-light text-gray-500 mb-2">I'm Yashvi Sharma</h2>
             <h1 
                 className="text-6xl md:text-7xl font-serif text-black leading-tight relative max-w-5xl mx-auto"

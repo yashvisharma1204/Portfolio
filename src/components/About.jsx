@@ -4,7 +4,7 @@ import BuildPhilosophy from './BuildPhilosophy';
 
 const About = () => {
     return (
-        <section className="bg-white p-8 md:p-24 flex flex-col items-center">
+        <section id="about" className="bg-white p-8 md:p-24 flex flex-col items-center">
             <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-12 items-center">
                 {/* Left Column: Bio & Experience */}
                 <div className="col-span-1">

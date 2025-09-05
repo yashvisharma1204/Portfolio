@@ -12,7 +12,7 @@ const Work = () => {
     }, []);
 
     return (
-        <section className="bg-white py-12 md:py-24 flex justify-center min-h-screen">
+        <section id="projects" className="bg-white py-12 md:py-24 flex justify-center min-h-screen">
             <div className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start px-4">
                 
                 {/* Left Column: Smaller Folder/Sticky Note */}

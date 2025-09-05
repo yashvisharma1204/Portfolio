@@ -301,3 +301,49 @@ html {
   }
 
 }
+/* In your index.css or a dedicated component CSS file */
+
+.spotlight-container {
+  position: relative;
+  overflow: hidden; /* Ensures the spotlight doesn't go outside the container */
+}
+
+.spotlight-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px; /* Size of the spotlight */
+  height: 300px; /* Size of the spotlight */
+  background: radial-gradient(circle, rgba(199, 69, 69, 0.929) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0); /* Start hidden and scaled down */
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Smooth transition */
+  pointer-events: none; /* Allows clicks to pass through */
+  z-index: 10; /* Ensure it's above other content but below the text */
+}
+
+.spotlight-container.active::before {
+  transform: translate(-50%, -50%) scale(1); /* Scale up to reveal */
+  opacity: 1;
+}
+
+/* Optional: For the "My Work" folder, to ensure text is above the spotlight */
+.folder-content-wrapper {
+  position: relative;
+  z-index: 20; /* Ensure content is above spotlight */
+}
+
+/* For the highlight-text span, you might need a definition if you don't have one */
+.highlight-text {
+  /* Initial state */
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, #82d387, #64bd77); /* Tailwind's emerald-200 */
+  transition: background-size 0.5s ease-in-out;
+}
+
+.highlight-text.active {
+  /* Active state */
+  background-size: 100% 100%;
+}

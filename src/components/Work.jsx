@@ -63,7 +63,7 @@ const Work = () => {
                         <ul className="space-y-1">
                             {/* Project 1 */}
                             <li>
-                                <a href="https://github.com/yashvisharma1204/JobSyncPro" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center w-full cursor-pointer group">
+                                <a href="https://github.com/yashvisharma1204/financial_fraud_detection" target="_blank" rel="noopener noreferrer" className="flex justify-between items-center w-full cursor-pointer group">
                                     <span className="flex-1 text-m md:text-m text-gray-500 font-light transition-all duration-300 group-hover:text-blue-800 group-hover:underline">
                                         💳 Financial Fraud Detection System
                                     </span>
@@ -91,7 +91,7 @@ const Work = () => {
 
                             <li>
                                 <a
-                                    href="https://github.com/yashvisharma1204/financial_fraud_detection"
+                                    href="https://github.com/yashvisharma1204/JobSyncPro"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex justify-between items-center w-full cursor-pointer group"

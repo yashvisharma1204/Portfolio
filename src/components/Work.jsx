@@ -185,9 +185,9 @@ const Work = () => {
                     className="mt-6"
                 >
                     <img
-                    src="https://peerlist.io/api/v1/projects/embed/PRJHP6L8JJPQGD77B3689POANL68JL?showUpvote=true&theme=light"
+                    src="https://peerlist.io/api/v1/projects/embed/PRJHP6L8JJPQGD77B3689POANL68JL?showUpvote=false&theme=light"
                     alt="Prompt Navigator (All-in-One)"
-                    className="h-16 sm:h-20 md:h-24 w-auto hover:scale-105 transition-transform duration-300 rounded-md shadow-md"
+                    className="h-16 sm:h-20 md:h-24 w-auto hover:scale-105 transition-transform duration-300"
                     />
                 </a>
                 </div>

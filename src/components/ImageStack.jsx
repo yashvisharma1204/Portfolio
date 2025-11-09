@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 
 const images = [
-  'one.jpg',
+  'nine.jpg',
   'four.jpg',
+  'ten.jpg',
   'five.jpg',
   'six.jpg',
+  'eight.jpg'
 ];
 
 const ImageStack = () => {

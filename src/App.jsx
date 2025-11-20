@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Work from './components/Work';
-import New from './components/New';
+import Contact from './components/Contact';
 function App() {
   return (
     <div className="bg-white min-h-screen">
@@ -12,6 +12,7 @@ function App() {
       <Hero id="home" />
       <About id="about" />
       <Work id="projects" />
+      <Contact id="contact" />
       </div>
     </div>
   );

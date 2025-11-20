@@ -28,7 +28,7 @@ const Navbar = () => {
         <a href="#home" className="hover:text-black">Home</a>
         <a href="#about" className="hover:text-black">About</a>
         <a href="#projects" className="hover:text-black">Projects</a>
-        <a href="#" className="hover:text-black">Contact</a>
+        <a href="#contact" className="hover:text-black">Contact</a>
       </div>
 
       {/* Desktop & Tablet "Resume" Button */}

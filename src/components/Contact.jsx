@@ -34,7 +34,7 @@ const Contact = () => {
                             <div className="space-y-3 text-base font-light text-gray-700">
                                 <p>
                                     <span className="font-medium text-black">Email:</span> 
-                                    <a href="mailto:your.email@example.com" className='ml-2 hover:underline'>your.email@example.com</a>
+                                    <a href="mailto:your.email@example.com" className='ml-2 hover:underline'>yashvi.sharma1204@gmail.com</a>
                                 </p>
                                 <p>
                                     <span className="font-medium text-black">Location:</span> 

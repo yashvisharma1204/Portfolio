@@ -1,6 +1,6 @@
 // src/components/ProjectImageStack.jsx
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 const ProjectImageStack = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);

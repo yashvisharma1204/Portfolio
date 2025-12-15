@@ -1,12 +1,31 @@
-# React + Vite
+# **Yashvi Sharma | Portfolio**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website showcasing my skills, projects, and contact information. Built with **React** and **Tailwind CSS**, the site highlights my journey as a **Data Engineer & Software Developer**.
 
-Currently, two official plugins are available:
+## **Features**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Hero section with animated introduction
+* Projects section with links to GitHub repositories and recent work
+* Contact form for messages and professional connections
+* Fully responsive design for all devices
 
-## Expanding the ESLint configuration
+## **Tech Stack**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React, Tailwind CSS
+* **Optional Backend:** Serverless functions or Google Sheets API for form submissions
+* **Deployment:** GitHub Pages / Vercel / Netlify
+
+## **Setup**
+
+```bash
+git clone https://github.com/yashvisharma1204/portfolio.git
+cd portfolio
+npm install
+npm start
+```
+
+## **Contact**
+
+* **LinkedIn:** [https://linkedin.com/in/yashvisharma1204](https://linkedin.com/in/yashvisharma1204)
+* **GitHub:** [https://github.com/yashvisharma1204](https://github.com/yashvisharma1204)
+

@@ -6,13 +6,10 @@ const Work = () => {
         const highlightTimer = setTimeout(() => {
             setShowHighlight(true);
         }, 500);
-        const spotlightTimer = setTimeout(() => {
-            setShowSpotlight(true); // Activate spotlight after a delay
-        }, 100); // Slightly earlier than highlight, or adjust as desired
-
+        
         return () => {
             clearTimeout(highlightTimer);
-            clearTimeout(spotlightTimer);
+            
         };
     }, []);
 

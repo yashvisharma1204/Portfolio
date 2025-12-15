@@ -25,7 +25,7 @@ const Contact = () => {
                             <div className="space-y-3 text-base font-light text-gray-700">
                                 <a href="https://linkedin.com/in/yashvisharma1204" className="block hover:text-blue-700 transition-colors">LinkedIn Profile</a>
                                 <a href="https://github.com/yashvisharma1204" className="block hover:text-black transition-colors">GitHub Repos</a>
-                                <a href="#" className="block hover:text-black transition-colors">My Resume (PDF)</a>
+                                <a href="https://yashvisharma2027.tiiny.site/" className="block hover:text-black transition-colors">My Resume (PDF)</a>
                             </div>
                         </div>
 

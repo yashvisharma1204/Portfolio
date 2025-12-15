@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 const images = [
-  'nine.jpg',
+  'one.jpg',
   'four.jpg',
   'ten.jpg',
   'five.jpg',

@@ -20,7 +20,7 @@ const Hero = () => {
         <span className="imperial-script-regular">Student</span>
         <br />
         {"&"}
-        <span className="inline-block relative">
+        {/* <span className="inline-block relative">
           <span
             className={`absolute bottom-full left-1/2 transform -translate-x-1/2 whitespace-nowrap aspiring-text mb-15 transition-opacity duration-300 ${
               isHovered ? "opacity-100" : "opacity-0"
@@ -36,9 +36,9 @@ const Hero = () => {
           >
             ^
           </span>
-        </span>
+        </span> */}
         {" "}
-        a Data Engineer
+        a developer
         <span className="inline-block ml-1 text-gray-700">*</span>
       </h1>
 

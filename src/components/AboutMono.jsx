@@ -18,9 +18,11 @@ import {
     Puzzle,
     BookOpen,
     FileText,
+    FileDown,
 } from 'lucide-react';
 import ContributionHeatmap from './ContributionHeatmap';
 import ThemeToggle from './ThemeToggle';
+import CopyEmail from './CopyEmail';
 import { motion, useReducedMotion } from 'framer-motion';
 
 // Pre-bind the motion element so it's referenced as a value (lint-friendly).
@@ -190,12 +192,36 @@ const outsideTech = [
     { icon: Puzzle, label: 'strategy games' },
 ];
 
+// Update this as you watch things (or wire to Trakt/Letterboxd later).
+const currentlyWatching = 'Dark (S3)';
+
 const BLOG_URL = 'https://yashvisharma1204.github.io/neural.y/';
 
+const experience = [
+    {
+        period: 'Feb 2026 — Present',
+        role: 'SDE Intern',
+        org: 'Nielsen',
+        detail: 'Full-stack engineering in Java, Spring Boot and Angular for Enablement and Audience Measurement Team.',
+    },
+    {
+        period: 'June 2025 — Aug 2025',
+        role: 'Data Science Intern',
+        org: 'Futurense Technologies',
+        detail: 'ML, Power BI & AWS on real-world datasets.',
+    },
+    {
+        period: 'June 2024 - Aug 2024',
+        role: 'Software Engineering Fellow',
+        org: 'Headstarter AI',
+        detail: 'Built Pantry Insight & Resume Builder during the fellowship.',
+    },
+];
+
 const writing = [
-    { tag: 'Paper Breakdown', title: 'Attention Is All You Need' },
-    { tag: 'Agentic AI', title: 'Research Agent' },
-    { tag: 'Model Compression', title: 'Shrinking DistilBERT' },
+    { tag: 'Paper Breakdown', title: 'Attention Is All You Need', status: 'Implemented' },
+    { tag: 'Agentic AI', title: 'Research Agent', status: 'Notes' },
+    { tag: 'Model Compression', title: 'Shrinking DistilBERT', status: 'Complete' },
 ];
 
 const socials = [
@@ -283,6 +309,12 @@ const About = () => {
                         </p>
                     </div>
 
+                    {/* Now strip */}
+                    {/* <p className="mt-5 border-l-2 border-gray-900 pl-3 text-sm text-gray-600 dark:border-neutral-100 dark:text-neutral-400">
+                        <span className="font-semibold text-gray-900 dark:text-neutral-100">Now:</span>{' '}
+                        backend (Java/Spring) @ Nielsen by day · ML papers &amp; experiments by night.
+                    </p> */}
+
                     <div className="mt-6 flex flex-wrap gap-3">
                         <a
                             href="mailto:yashvi.sharma1204@gmail.com"
@@ -300,12 +332,27 @@ const About = () => {
                             <Calendar className="h-4 w-4" strokeWidth={1.75} />
                             Connect on LinkedIn
                         </a>
+                        <a
+                            href="/resume.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            download
+                            className="inline-flex items-center gap-2 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-gray-800 transition-colors hover:bg-gray-50 dark:border-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-800"
+                        >
+                            <FileDown className="h-4 w-4" strokeWidth={1.75} />
+                            Resume
+                        </a>
                     </div>
 
-                    <p className="mt-5 flex items-center gap-2 text-sm text-gray-600 dark:text-neutral-400">
-                        <span className="inline-block h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
-                        Open to research fellowships &amp; ML collaboration.
-                    </p>
+                    <div className="mt-5 flex flex-wrap items-center gap-2 text-sm">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-2.5 py-1 text-xs font-medium text-green-700 dark:bg-green-900/40 dark:text-green-300">
+                            <span className="inline-block h-2 w-2 rounded-full bg-green-500" aria-hidden="true" />
+                            Open to
+                        </span>
+                        <span className="text-gray-600 dark:text-neutral-400">
+                            research fellowships · ML internships · collaborations
+                        </span>
+                    </div>
 
                     {/* Interests + Outside tech pills */}
                     <div className="mt-8 space-y-4">
@@ -342,9 +389,33 @@ const About = () => {
                                     </li>
                                 ))}
                             </ul>
+                            <p className="mt-2 flex items-center gap-1.5 text-xs text-gray-500 dark:text-neutral-400">
+                                <Tv className="h-3.5 w-3.5" strokeWidth={1.75} aria-hidden="true" />
+                                Currently watching:{' '}
+                                <span className="text-gray-700 dark:text-neutral-300">{currentlyWatching}</span>
+                            </p>
                         </div>
                     </div>
                 </section>
+
+                {/* Experience */}
+                <Reveal className="mt-16">
+                    <SectionLabel>Experience</SectionLabel>
+                    <ol className="mt-4 border-l border-gray-200 dark:border-neutral-800">
+                        {experience.map((e) => (
+                            <li key={`${e.org}-${e.role}`} className="relative pl-6 pb-6 last:pb-0">
+                                <span className="absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full bg-gray-900 dark:bg-neutral-100" />
+                                <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-gray-400 dark:text-neutral-500">
+                                    {e.period}
+                                </p>
+                                <p className="mt-0.5 text-sm font-semibold text-gray-900 dark:text-neutral-100">
+                                    {e.role} · <span className="text-gray-700 dark:text-neutral-300">{e.org}</span>
+                                </p>
+                                <p className="mt-0.5 text-sm text-gray-600 dark:text-neutral-400">{e.detail}</p>
+                            </li>
+                        ))}
+                    </ol>
+                </Reveal>
 
                 {/* Tech Stack */}
                 <Reveal className="mt-16">
@@ -398,8 +469,12 @@ const About = () => {
 
                 {/* Writing */}
                 <Reveal className="mt-16">
-                    <SectionLabel>Writing</SectionLabel>
-                    <p className={`mt-3 ${BODY}`}>
+                    <SectionLabel>Research &amp; Writing</SectionLabel>
+                    <blockquote className="mt-3 border-l-2 border-gray-900 pl-4 text-[15px] italic leading-relaxed text-gray-700 dark:border-neutral-100 dark:text-neutral-300">
+                        &ldquo;I didn&rsquo;t just love data &mdash; I loved understanding what was happening
+                        underneath it.&rdquo;
+                    </blockquote>
+                    <p className={`mt-4 ${BODY}`}>
                         I write about ML papers, experiments, and things I build on{' '}
                         <a href={BLOG_URL} target="_blank" rel="noreferrer" className={LINK}>
                             neural.y
@@ -408,12 +483,17 @@ const About = () => {
                     </p>
                     <ol className={`mt-4 space-y-2 ${BODY}`}>
                         {writing.map((w, i) => (
-                            <li key={w.title} className="flex gap-2">
+                            <li key={w.title} className="flex flex-wrap items-center gap-x-2 gap-y-1">
                                 <span className="text-gray-400 dark:text-neutral-500">{i + 1}.</span>
                                 <span>
                                     <span className="font-semibold text-gray-900 dark:text-neutral-100">{w.title}</span>
                                     <span className="text-gray-500 dark:text-neutral-400"> — {w.tag}</span>
                                 </span>
+                                {w.status ? (
+                                    <span className="rounded-md bg-gray-100 px-1.5 py-0.5 text-[11px] font-medium text-gray-600 dark:bg-neutral-800 dark:text-neutral-300">
+                                        {w.status}
+                                    </span>
+                                ) : null}
                             </li>
                         ))}
                     </ol>
@@ -425,6 +505,12 @@ const About = () => {
                     >
                         Read all on neural.y &rarr;
                     </a>
+
+                    {/* <p className="mt-5 border-l-2 border-gray-900 pl-3 text-sm text-gray-600 dark:border-neutral-100 dark:text-neutral-400">
+                        <span className="font-semibold text-gray-900 dark:text-neutral-100">From scratch:</span>{' '}
+                        two years working through the math and building models in raw NumPy — including a
+                        Transformer trained to 99.8% accuracy.
+                    </p> */}
                 </Reveal>
 
                 {/* Open Source */}
@@ -501,11 +587,8 @@ const About = () => {
                 <Reveal className="mt-16">
                     <SectionLabel>Get in touch</SectionLabel>
                     <address className={`mt-3 not-italic ${BODY}`}>
-                        <p>
-                            You can reach me anytime at{' '}
-                            <a href="mailto:yashvi.sharma1204@gmail.com" className={LINK}>
-                                yashvi.sharma1204@gmail.com
-                            </a>
+                        <p className="flex flex-wrap items-center gap-1.5">
+                            You can reach me anytime at <CopyEmail />
                         </p>
                         <p className="mt-1.5">
                             Or connect with me on{' '}
@@ -523,14 +606,19 @@ const About = () => {
                     © 2025 Built with{' '}
                     <Heart className="h-4 w-4 fill-red-500 text-red-500" aria-label="love" /> by Yashvi
                 </span>
-                <a
-                    href="https://github.com/yashvisharma1204"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 underline decoration-gray-300 underline-offset-4 hover:text-gray-900 dark:decoration-neutral-600 dark:hover:text-neutral-200"
-                >
-                    This website is open-source <GitFork className="h-3.5 w-3.5" aria-hidden="true" />
-                </a>
+                <div className="flex flex-col gap-1 sm:items-end">
+                    <a
+                        href="https://github.com/yashvisharma1204"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 underline decoration-gray-300 underline-offset-4 hover:text-gray-900 dark:decoration-neutral-600 dark:hover:text-neutral-200"
+                    >
+                        This website is open-source <GitFork className="h-3.5 w-3.5" aria-hidden="true" />
+                    </a>
+                    <span className="text-xs text-gray-400 dark:text-neutral-600">
+                        Last updated {__BUILD_DATE__}
+                    </span>
+                </div>
             </footer>
         </div>
     );

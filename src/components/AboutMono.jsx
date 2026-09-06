@@ -115,14 +115,14 @@ const openSourceContributions = [
             {
                 id: '#18931',
                 kind: 'Issue',
-                state: 'merged',
+                state: 'approved',
                 title: 'Example of validation for Large Constant Collection',
                 href: 'https://github.com/checkstyle/checkstyle/issues/18931',
             },
             {
                 id: '#21478',
                 kind: 'Issue',
-                state: 'merged',
+                state: 'approved',
                 title:
                     'SuppressWarningsCheck: StringIndexOutOfBoundsException on string concatenation or cast inside a ternary in @SuppressWarnings',
                 href: 'https://github.com/checkstyle/checkstyle/issues/21478',
@@ -550,10 +550,12 @@ const About = () => {
                                             className={`shrink-0 rounded-md px-1.5 py-0.5 text-[11px] font-medium ${
                                                 item.state === 'merged'
                                                     ? 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300'
+                                                    : item.state === 'approved'
+                                                    ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300'
                                                     : 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300'
                                             }`}
                                         >
-                                            {item.kind} · {item.state === 'merged' ? 'Merged' : 'Open'}
+                                            {item.kind} · {item.state.charAt(0).toUpperCase() + item.state.slice(1)}
                                         </span>
                                         <span className="w-full text-sm leading-snug text-gray-600 dark:text-neutral-400 sm:w-auto sm:flex-1">
                                             {item.title}

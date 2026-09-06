@@ -115,14 +115,14 @@ const openSourceContributions = [
             {
                 id: '#18931',
                 kind: 'Issue',
-                state: 'open',
+                state: 'merged',
                 title: 'Example of validation for Large Constant Collection',
                 href: 'https://github.com/checkstyle/checkstyle/issues/18931',
             },
             {
                 id: '#21478',
                 kind: 'Issue',
-                state: 'open',
+                state: 'merged',
                 title:
                     'SuppressWarningsCheck: StringIndexOutOfBoundsException on string concatenation or cast inside a ternary in @SuppressWarnings',
                 href: 'https://github.com/checkstyle/checkstyle/issues/21478',

@@ -222,6 +222,7 @@ const writing = [
     { tag: 'Paper Breakdown', title: 'Attention Is All You Need', status: 'Implemented' },
     { tag: 'Agentic AI', title: 'Research Agent', status: 'Notes' },
     { tag: 'Model Compression', title: 'Shrinking DistilBERT', status: 'Complete' },
+    { tag: 'Model Optimization', title: 'Custom Second-Order Optimizer', status: 'Complete' },
 ];
 
 const socials = [

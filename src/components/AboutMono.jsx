@@ -152,6 +152,20 @@ const openSourceContributions = [
         ],
     },
     {
+        org:'mesa',
+        devicon: 'robot',
+        avatar: 'https://github.com/mesa.png',
+        items: [
+            {
+                id: '#3858',
+                kind: 'PR',
+                state: 'merged',
+                title: 'Fix _get_hexmesh mutable cache return and wrong type hint',
+                href: 'https://github.com/mesa/mesa/pull/3858',
+            },
+        ],
+    },
+    {
         org: 'pgmpy',
         devicon: 'python-plain',
         avatar: 'https://github.com/pgmpy.png',

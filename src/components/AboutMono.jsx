@@ -299,7 +299,7 @@ const About = () => {
                     </h1>
 
                     <div className={`mt-4 space-y-1.5 ${BODY}`}>
-                        <p>Third year B.Tech CSE (AI &amp; Data Engineering) student at LPU 🇮🇳</p>
+                        <p>Final year B.Tech CSE (AI &amp; Data Engineering) student at LPU 🇮🇳</p>
                         <p>
                             SDE Intern <span className="text-gray-900 dark:text-neutral-100">@ Nielsen</span> ·
                             Ex-Data Science Intern{' '}
